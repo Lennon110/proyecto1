@@ -97,7 +97,7 @@ nav h1 {
     font-size: 2rem;
     font-weight: 600;
 
-    letter-spacing: 4px;
+    letter-spacing: 2px;
 }
 
 /* HERO */
@@ -345,13 +345,11 @@ ul {
 
     align-items: center;
 
-    transition: 0.3s;
-
 }
 
 .project-card:hover {
 
-    transform: translateY(-10px);
+    transform: translateY(-8px);
 
     border: 1px solid var(--primary-color);
 }
@@ -445,6 +443,18 @@ form {
     flex: 1;
 }
 
+
+input,
+textarea,
+button,
+.card,
+.profile-card,
+.skill-card,
+.project-card,
+nav img {
+    transition: 0.3s ease;
+}
+
 input,
 textarea {
 
@@ -467,7 +477,7 @@ textarea {
 
 textarea {
 
-    resize: none;
+    resize: vertical;
 
     min-height: 150px;
 }
@@ -475,7 +485,11 @@ textarea {
 input:focus,
 textarea:focus {
 
-    outline: 1px solid var(--primary-color);
+    outline: none;
+
+    border: 1px solid var(--primary-color);
+
+    box-shadow: 0 0 10px rgba(0, 188, 125, 0.3);
 }
 
 input::placeholder,
@@ -504,14 +518,20 @@ button {
 
     cursor: pointer;
 
-    transition: 0.3s;
 }
 
 button:hover {
 
     transform: translateY(-3px);
 
-    opacity: 0.9;
+    box-shadow: 0 10px 20px rgba(0, 188, 125, 0.25);
+}
+
+button:focus-visible {
+
+    outline: 2px solid white;
+
+    outline-offset: 3px;
 }
 
 .contact-info {
@@ -571,22 +591,6 @@ footer {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
 }
 
-.card,
-.profile-card,
-.skill-card,
-.project-card {
-
-    transition: 0.3s;
-}
-
-.card:hover,
-.profile-card:hover,
-.skill-card:hover,
-.project-card:hover {
-
-    transform: translateY(-10px);
-}
-
 .card ul,
 .profile-card ul {
 
@@ -603,12 +607,10 @@ p {
 }
 
 img {
+    
     max-width: 100%;
-}
 
-nav img {
-
-    transition: 0.3s;
+    display: block;
 }
 
 nav img:hover {
@@ -629,7 +631,7 @@ nav img:hover {
 
     .hero-name {
 
-        font-size: 3rem;
+        font-size: clamp(2.5rem, 8vw, 4.5rem);
     }
 
     .hero-role {
@@ -676,7 +678,7 @@ nav img:hover {
 
     .hero-name {
 
-        font-size: 2.3rem;
+        font-size: clamp(2.5rem, 8vw, 4.5rem);
     }
 
     .hero-role {

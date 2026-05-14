@@ -5,14 +5,15 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="img/icono-pagina.ico"/>
+    <link rel="icon" type="image/x-icon" href="img/icono-pagina.ico" />
 
     <title>Portafolio</title>
 
     <!-- GOOGLE FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
 
     <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
@@ -30,6 +31,7 @@
             <h1>PORTAFOLIO</h1>
 
             <img src="img/logo-carrera.png" alt="Logo carrera">
+
         </nav>
 
         <!-- HERO -->
@@ -282,35 +284,57 @@
 
                         <h3>Envíame un mensaje</h3>
 
-                        <form>
+                        <form action="#">
 
                             <div class="input-row">
 
                                 <div>
+
                                     <label for="nombre">Nombre</label>
-                                    <input type="text" id="nombre" placeholder="Ingresa tu nombre">
+
+                                    <input type="text" id="nombre" name="nombre" placeholder="Ingresa tu nombre"
+                                        minlength="2" maxlength="50" autocomplete="given-name" autocapitalize="words"
+                                        required>
+
                                 </div>
 
                                 <div>
+
                                     <label for="apellido">Apellido</label>
-                                    <input type="text" id="apellido" placeholder="Ingresa tu apellido">
+
+                                    <input type="text" id="apellido" name="apellido" placeholder="Ingresa tu apellido"
+                                        minlength="2" maxlength="50" autocomplete="family-name" autocapitalize="words"
+                                        required>
+
                                 </div>
 
                             </div>
 
                             <div class="input-group">
+
                                 <label for="email">Email</label>
-                                <input type="email" id="email" placeholder="correo@gmail.com">
+
+                                <input type="email" id="email" name="email" placeholder="correo@gmail.com"
+                                    maxlength="100" autocomplete="email" spellcheck="false" required>
+
                             </div>
 
                             <div class="input-group">
+
                                 <label for="tema">Tema</label>
-                                <input type="text" id="tema" placeholder="Consulta sobre proyectos">
+
+                                <input type="text" id="tema" name="tema" placeholder="Ej: Consulta sobre proyectos"
+                                    minlength="5" maxlength="100" required>
+
                             </div>
 
                             <div class="input-group">
+
                                 <label for="mensaje">Mensaje</label>
-                                <textarea id="mensaje" placeholder="Escribe tu mensaje aquí..."></textarea>
+
+                                <textarea id="mensaje" name="mensaje" rows="6" minlength="10" maxlength="500"
+                                    placeholder="Escribe tu mensaje aquí..." required></textarea>
+
                             </div>
 
                             <button type="submit">
